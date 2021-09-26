@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+      content="This is an example of a meta description. This will often show up in search results.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>BLOG</title>
+  </head>
+  <body>
+    <!-- navbar goes here -->
+    <nav class="navbar shadow-sm navbar-expand-lg navbar-light bg_dark_nav bg_white navi border-bottom py-0 position-fixed top-0 start-0 end-0 z_index">
+      <div class="container-fluid px-2">
+        <a class="navbar-brand" href="#" title="brand name"><img class="d-block h_w" src="Logo.png" alt="our brand"></a>
+        <a href="#" title="Dark and light mode"> 
+        <img class="h_w show_sun moon_img hide_start" onclick="bg_dark_mode()" src="sun.png" alt="sun">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <div class="d-flex">
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="#" title="All tools" onclick="show_tools()">All Tools <img class="chvrn_pic" src="drop_chevron.svg" alt="dropdown"></a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="#" title="Blog">Blog</a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="#" title="title">Contact us</a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="#" title="title">About us</a></div>
+            <div class="nav-item mx-2"><a class="fw_600 anchor c_white" href="#" title="title"></a></div>
+          </div>
+          <div class="position-relative m-0 justify-content-end d-flex search_div mx-1 hide_1000">
+            <input class="py-3 w-100 inp rounded-0 border-0 hide_1000 bg_light bg_dark_inp c_white" type="text" placeholder="Enter a word to search..">
+            <a class="hide_1000" href="#"><img class="position-absolute top_right hide_1000" src="search.svg" alt="search"></a>
+          </div>
+          <a class="mx-2 hide_1000" href="#"><img src="Shape 1.png" alt="bell"></a>
+          <a class="mx-2 hide_1000" href="#"><img src="Group 1198.png" alt="user"></a>
+          <div><button class="p-2 rounded bg_light bg_dark_inp c_white blue b_none fw_600 hide_1000" type="button">ENGLISH <img src="global.png" alt="global"></button></div>
+        </div>
+      </div>
+    </nav>
+    <!-- display none element goes here  -->
+    <div class="container-fluid mt-5 pt-5 border pb-4 position-absolute tools top20">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Text Content Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2"> 
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Images Editing Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Keywords Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>BackLink Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Website Management</span>
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Text Content Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2"> 
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Images Editing Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Keywords Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>BackLink Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Website Management</span>
+          </a>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Text Content Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2"> 
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Images Editing Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Keywords Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>BackLink Tools</span>
+          </a>
+        </div>
+        <div class="col-md-2">
+          <a title="this is link" href="#" class="anchor fw_600">
+          <span class="all_tools rounded text_tools">
+          <img  class="hw20"  src="https://v1.smallseotools.com/webimages/text_tools.svg" alt="picture"></span>
+          <span>Website Management</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- search bar goes here-->
+    <div class="input1 hide_start show1000 d-flex bg_dark_1 bg_nav justify-content-center align-items-center mt-4 position-relative pt-4">
+      <input class="py-3 rounded-0 border shadow-sm abs_inp show1000 bg_light_1 txt_white hide_start" id="inp_id" type="text" placeholder="Enter your word to search from this site...">
+      <a class="hide_start show1000" href="#"><img class="hide_start show1000 d-inline-block border border-bottom-0 border-top-0 border-end-0 px-3 py-2 mx-3 position-absolute pic_adjust" src="search.svg" alt="search"></a>
+    </div>
+    <!-- main section goes here -->
+    <div class="container-fluid mt-md-3">
+      <div class="container pt-2">
+        <div class="row justify-content-center">
+          <div class="col-lg-5 text-center py-4">
+            <a href="#" title="ad here">
+            <img class="d-block w-100" src="ads.png" alt="ad here">
+            </a>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-9 border">
+            <div class="text-center fs-4 fw_600 py-2 border-bottom">BLOG</div>
+            <div class="text-center">
+              <button type="button" onclick="btn_all()" class="btn border py-2 px-3 mx-1 my-3 bg_btn rounded-0 btn_all">ALL</button>
+              <button type="button" onclick="btn_seo()" class="btn border py-2 px-3 mx-1 my-3 bg_btn rounded-0 btn_seo">SEO</button>
+              <button type="button" onclick="btn_tech()" class="btn border py-2 px-3 mx-1 my-3 bg_btn rounded-0 btn_tech">TECH</button>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-lg-6">
+                <!-- 1 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+                <!-- 2 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+                <!-- 3 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+                <!-- 4 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <!-- 1 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+                <!-- 2 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+                <!-- 3 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+                <!-- 4 -->
+                <div class="border mb-2">
+                  <div class="box w-100 d-flex">
+                    <div class="w-50 h-100 bld_txt px-4 py-2 fw_700 text-white">
+                      <a class="anchr" href="#"> How to create your own logo for free?</a>
+                    </div>
+                    <div class="w-50 h-100 logo px-4 py-2"> <img class="float-end mt-3 hw" src="lgomkr.png" alt="LOGO-MAKER"> </div>
+                  </div>
+                  <div class="txt_card px-2 d-flex">
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">VIEWS:<span class="text-dark fs_10 mx-2">1000</span></p>
+                    <p class="fw_600 text-primary px-xl-5 px-sm-2">CATAGORY:<span class="text-dark fs_10 mx-2">SEO</span></p>
+                  </div>
+                  <p class="text-center py-0 px-2 border-top fw_600">When our bussiness needs some upgrading. Hiring a professional becomes our utmost priority. it is beacause of many interpreneurs think.. </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="side_box pstn_abslt border bg_light">
+      <a href="#" title="side menu" onclick="side_menu()">
+      <img class="position-absolute hw20 top_end" src="chvrn.png" alt="right">
+      </a>
+      <div class="fw_600 fs-4 text-center">Side Menu</div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+      <div class="w-100 mt-4">
+        <a class="anchor fw_600" href="#"><img class="hw20 mx-3" src="sidetool.png" alt="facebook">Tool Name Goes Here</a>
+      </div>
+    </div>
+    <div class="owl-carousel owl-theme bg_dark_1 mt-5 px-3">
+      <div class="item">
+        <a title="carousel items" href="#">
+        <img src="1.png" alt="carousel img" >
+        </a>
+      </div>
+      <div class="item">
+        <a title="carousel items" href="#">
+        <img src="2.png" alt="carousel img">
+        </a>
+      </div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="3.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="4.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="5.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="6.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="1.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="6.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="5.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="4.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="3.png" alt="carousel img"></a></div>
+      <div class="item"><a class="" title="carousel items" href="#"><img class="" src="2.png" alt="carousel img"></a></div>
+    </div>
+    <div class="container-fluid">
+      <div class="row bg-secondary">
+        <div class="col-md-3 text-center border-end pb-2">
+          <div class="text-center fs-4 fw_600 text-white d-inline-block border-bottom">GET IN TOUCH</div>
+          <div class="fw_600 text-white text-start mt-4 px-4"><img class="hw20 mx-2" src="email.png" alt="email">Example@gmail.com</div>
+          <div class="fw_600 text-white text-start mt-4 px-4"><img class="hw20 mx-2" src="phonee.png" alt="email">+123456789123</div>
+          <div class="fw_600 text-white text-start mt-4 px-4"><img class="hw20 mx-2" src="f.png" alt="email">weareonfb.com</div>
+        </div>
+        <div class="col-md-6 text-center border-end">
+          <div class="text-center fs-4 fw_600 text-white d-inline-block border-bottom">SUBSCRIBE</div>
+          <div class="inp mt-5">
+            <input class="w-75 py-3 border-0 fw_600" type="text" placeholder="Enter your email for subscription...">
+          </div>
+          <div class="text-center mt-3">
+            <button class="fw_600 bg_red py-2 px-4 border-0 shadow text-white" type="submit">SUBSCRIBE</button>
+          </div>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="text-center fs-4 fw_600 text-white d-inline-block border-bottom">OTHER TOOLS</div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+          <div class="fw_600 my-2"><a class="text-white anchor" href="#">FAVICON GENERATOR</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="bg-dark text-center fw_600 text-white py-3">COPY RIGHT RESERVED (2021 - 2030)</div>
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
+<script>
+  function show_tools(){
+      $(".tools").toggleClass("top8")
+      $(".chvrn_pic").toggleClass("chvrn")
+  }
+   $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+      })
+  function btn_all(){
+      $(".hw").attr("src" , "lgomkr.png")
+      $(".anchr").text("How to create your own logo for free?")
+      $(".btn_all").css({"background" : "linear-gradient(to right,#4c08a6,#0a015a)", "color" : "white" })
+      $(".btn_seo , .btn_tech").css({"background" : "#eff4f9","color" : "black"})
+  }
+  function btn_seo(){
+      $(".hw").attr("src" , "pic2.png")
+      $(".anchr").text("How to create your favicon for free?")
+      $(".btn_seo").css({"background" : "linear-gradient(to right,#4c08a6,#0a015a)", "color" : "white" })
+      $(".btn_all , .btn_tech").css({"background" : "#eff4f9","color" : "black"})
+  }
+  function btn_tech(){
+      $(".hw").attr("src" , "cardimgg.png")
+      $(".anchr").text("How to create your own ad for free?")
+      $(".btn_tech").css({"background" : "linear-gradient(to right,#4c08a6,#0a015a)", "color" : "white" })
+      $(".btn_all , .btn_seo").css({"background" : "#eff4f9","color" : "black"})
+  }
+  let menu_show;
+  function side_menu(){
+      menu_show = !menu_show;
+      if(menu_show){
+          $(".pstn_abslt").css({"left" : "0%"})
+      $(".top_end").addClass("trsnfrm")
+      }
+      else{
+          $(".pstn_abslt").css({"left" : "-25%"})
+      $(".top_end").removeClass("trsnfrm")
+      }
+     
+  }
+</script>
